@@ -244,6 +244,76 @@
             margin-top: var(--sp-2);
         }
 
+        /* Dark mode */
+        @media (prefers-color-scheme: dark) {
+            .home-hero {
+                background: linear-gradient(135deg, #1e1a30 0%, #221a12 35%, #0c1a28 70%, #101e2e 100%);
+            }
+
+            .home-hero::before {
+                background: radial-gradient(ellipse at 20% 50%, rgba(107, 92, 231, 0.2) 0%, transparent 50%),
+                            radial-gradient(ellipse at 80% 30%, rgba(208, 101, 32, 0.15) 0%, transparent 50%),
+                            radial-gradient(ellipse at 50% 90%, rgba(11, 61, 107, 0.15) 0%, transparent 50%);
+            }
+
+            .home-hero .hero-badge {
+                background: rgba(255, 255, 255, 0.1);
+                color: var(--ll-text);
+            }
+
+            .home-hero .subtitle {
+                color: var(--ll-text-secondary);
+            }
+
+            .home-hero .hero-scroll svg {
+                stroke: var(--ll-text);
+            }
+
+            .app-panel[style*="e8e0ff"] {
+                background: linear-gradient(160deg, #1e1a30 0%, #1a1828 100%) !important;
+            }
+
+            .app-panel[style*="e8e0ff"] .app-panel-visual {
+                background: rgba(107, 92, 231, 0.08) !important;
+            }
+
+            .app-panel[style*="FFF0DC"] {
+                background: linear-gradient(160deg, #251c14 0%, #201810 100%) !important;
+            }
+
+            .app-panel[style*="FFF0DC"] .app-panel-visual {
+                background: rgba(208, 101, 32, 0.08) !important;
+            }
+
+            .app-panel[style*="d4e8f4"] {
+                background: linear-gradient(160deg, #101e2e 0%, #0c1824 100%) !important;
+            }
+
+            .app-panel[style*="d4e8f4"] .app-panel-visual {
+                background: rgba(11, 61, 107, 0.08) !important;
+            }
+
+            .app-panel[style*="d4e8f4"] .app-panel-visual p[style*="color: #0B3D6B"] {
+                color: #6ba8d0 !important;
+            }
+
+            .value-item[style*="f0ecf8"] {
+                background: rgba(107, 92, 231, 0.08) !important;
+            }
+
+            .value-item[style*="FFF5EC"] {
+                background: rgba(208, 101, 32, 0.06) !important;
+            }
+
+            .value-item[style*="E8F4F8"] {
+                background: rgba(11, 61, 107, 0.08) !important;
+            }
+
+            .about-section {
+                background: linear-gradient(180deg, var(--ll-bg) 0%, #18181e 100%);
+            }
+        }
+
         @media (max-width: 768px) {
             .app-panel,
             .app-panel-reverse {
@@ -284,10 +354,10 @@
         <div class="nav-inner">
             <a href="index.html" class="nav-brand">
                 <svg class="nav-logo" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 16c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6" stroke="#1a1a2e" stroke-width="2.8" stroke-linecap="round" fill="none"/>
-                    <path d="M22 16c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6" stroke="#1a1a2e" stroke-width="2.8" stroke-linecap="round" fill="none"/>
-                    <circle cx="10" cy="16" r="1.4" fill="#1a1a2e"/>
-                    <circle cx="22" cy="16" r="1.4" fill="#1a1a2e"/>
+                    <path d="M10 16c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+                    <path d="M22 16c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+                    <circle cx="10" cy="16" r="1.4" fill="currentColor"/>
+                    <circle cx="22" cy="16" r="1.4" fill="currentColor"/>
                 </svg>
                 <span class="nav-wordmark">Little Loop</span>
             </a>
@@ -315,7 +385,7 @@
             </div>
         </div>
         <div class="hero-scroll">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a1a2e" stroke-width="2" stroke-linecap="round"><path d="M7 10l5 5 5-5"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 10l5 5 5-5"/></svg>
         </div>
     </section>
 
@@ -393,10 +463,10 @@
         <div class="footer-inner">
             <div class="footer-brand">
                 <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 16c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6" stroke="#1a1a2e" stroke-width="2.8" stroke-linecap="round" fill="none"/>
-                    <path d="M22 16c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6" stroke="#1a1a2e" stroke-width="2.8" stroke-linecap="round" fill="none"/>
-                    <circle cx="10" cy="16" r="1.4" fill="#1a1a2e"/>
-                    <circle cx="22" cy="16" r="1.4" fill="#1a1a2e"/>
+                    <path d="M10 16c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+                    <path d="M22 16c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+                    <circle cx="10" cy="16" r="1.4" fill="currentColor"/>
+                    <circle cx="22" cy="16" r="1.4" fill="currentColor"/>
                 </svg>
                 <span class="footer-copy">&copy; 2026 Little Loop</span>
             </div>
