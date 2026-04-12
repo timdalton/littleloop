@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyReady | Little Loop</title>
+    <meta name="description" content="Instant, actionable weather recommendations. No data overload — just quick answers about what you need before you leave the house.">
+    <meta property="og:title" content="SkyReady — Weather Decisions Made Simple">
+    <meta property="og:description" content="Open the app, get an actionable recommendation in under two seconds. Umbrella? Jacket? Sun cream? Answered.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="canonical" href="https://littleloop.co.uk/skyready.html">
+</head>
+<body class="app-skyready">
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">
+                <svg class="nav-logo" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 16c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6" stroke="#1a1a2e" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M22 16c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6" stroke="#1a1a2e" stroke-width="2.8" stroke-linecap="round" fill="none"/><circle cx="10" cy="16" r="1.4" fill="#1a1a2e"/><circle cx="22" cy="16" r="1.4" fill="#1a1a2e"/></svg>
+                <span class="nav-wordmark">Little Loop</span>
+            </a>
+            <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+            <ul class="nav-links">
+                <li><a href="frame.html">Frame</a></li>
+                <li><a href="skyready.html" class="active">SkyReady</a></li>
+                <li><a href="tideready.html">TideReady</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="app-hero">
+            <img src="images/icon-skyready.png" alt="SkyReady app icon" class="app-icon-img app-icon-img-lg">
+            <div class="hero-badge">Weather</div>
+            <h1>Instant weather decisions.</h1>
+            <p class="subtitle">Open the app, get an actionable recommendation in under two seconds. Umbrella? Jacket? Sun cream? Answered.</p>
+            <a href="https://apps.apple.com/app/skyready/id6759346584" class="app-store-badge">
+                <svg viewBox="0 0 20 20" fill="white"><path d="M15.5 10.6c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.1.8-.7 0-1.7-.7-2.8-.7-1.4 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7 1.3 0 1.6.7 2.8.7 1.2 0 2-1 2.7-2.1.9-1.2 1.2-2.4 1.2-2.5-.1 0-2.7-1.3-2.7-3.4zM13 4.5c.6-.7 1-1.7.9-2.7-0.9 0-1.9.6-2.5 1.3-.6.6-.9 1.6-.8 2.6 1 .1 1.8-.5 2.4-1.2z"/></svg>
+                Download on the App Store
+            </a>
+        </div>
+    </section>
+
+    <div class="section-coloured">
+        <div class="screenshot-showcase fade-in">
+            <div class="screenshot-row">
+                <div class="screenshot-item"><img src="images/skyready-weather.png" alt="SkyReady weather recommendation" loading="lazy" width="1320" height="2868"></div>
+                <div class="screenshot-item"><img src="images/skyready-notification.png" alt="SkyReady morning notification" loading="lazy" width="1320" height="2868"></div>
+                <div class="screenshot-item"><img src="images/skyready-forecast.png" alt="SkyReady forecast view" loading="lazy" width="1320" height="2868"></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="section-header fade-in">
+            <h2>What makes SkyReady different</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature feature-coloured fade-in">
+                <div class="feature-icon">⚡</div>
+                <h3>Two-Second Answers</h3>
+                <p>No charts, no hourly breakdowns, no scrolling. Open the app and know what you need.</p>
+            </div>
+            <div class="feature feature-coloured fade-in">
+                <div class="feature-icon">🌡️</div>
+                <h3>Actionable Advice</h3>
+                <p>Not "12°C with 60% humidity." Instead: "Grab a jacket, skip the umbrella." Decisions, not data.</p>
+            </div>
+            <div class="feature feature-coloured fade-in">
+                <div class="feature-icon">🎨</div>
+                <h3>Dynamic Themes</h3>
+                <p>The entire app shifts colour based on conditions. Warm pastels for sun, cool blues for rain.</p>
+            </div>
+            <div class="feature feature-coloured fade-in">
+                <div class="feature-icon">🔔</div>
+                <h3>Daily Briefing</h3>
+                <p>Get a notification each morning with your gear checklist. Leave prepared, every time.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="pullquote-section fade-in">
+        <blockquote>"No data overload. Just answers."</blockquote>
+        <cite>Most weather apps give you more information than you need. SkyReady gives you exactly what matters.</cite>
+    </div>
+
+    <div class="closing-cta">
+        <img src="images/icon-skyready.png" alt="SkyReady" class="app-icon-img app-icon-img-md" style="margin: 0 auto var(--sp-3); display: block;">
+        <h2>Ready to simplify your mornings?</h2>
+        <p>Free to use. Daily notifications and customisation available with SkyReady Plus.</p>
+        <a href="https://apps.apple.com/app/skyready/id6759346584" class="app-store-badge">
+            <svg viewBox="0 0 20 20" fill="white"><path d="M15.5 10.6c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.1.8-.7 0-1.7-.7-2.8-.7-1.4 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7 1.3 0 1.6.7 2.8.7 1.2 0 2-1 2.7-2.1.9-1.2 1.2-2.4 1.2-2.5-.1 0-2.7-1.3-2.7-3.4zM13 4.5c.6-.7 1-1.7.9-2.7-0.9 0-1.9.6-2.5 1.3-.6.6-.9 1.6-.8 2.6 1 .1 1.8-.5 2.4-1.2z"/></svg>
+            Download on the App Store
+        </a>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M10 16c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6" stroke="#1a1a2e" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M22 16c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6" stroke="#1a1a2e" stroke-width="2.8" stroke-linecap="round" fill="none"/><circle cx="10" cy="16" r="1.4" fill="#1a1a2e"/><circle cx="22" cy="16" r="1.4" fill="#1a1a2e"/></svg>
+                <span class="footer-copy">&copy; 2026 Little Loop</span>
+            </div>
+            <div class="footer-links">
+                <a href="frame.html">Frame</a>
+                <a href="skyready.html">SkyReady</a>
+                <a href="tideready.html">TideReady</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="support.html">Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>

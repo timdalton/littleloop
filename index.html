@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Loop | Small apps, made with care</title>
+    <meta name="description" content="Little Loop is an indie app studio building thoughtful iOS apps. Frame, SkyReady, and TideReady.">
+    <meta property="og:title" content="Little Loop — Small apps, made with care">
+    <meta property="og:description" content="An indie app studio building thoughtful iOS apps that do one thing well.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="canonical" href="https://littleloop.co.uk/">
+    <style>
+        .home-hero {
+            min-height: 72vh;
+            min-height: 72dvh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: var(--sp-10) var(--sp-3) var(--sp-8);
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #d8d0f0 0%, #FFE8D0 35%, #c0dcea 70%, #d4e8f4 100%);
+        }
+
+        .home-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 20% 50%, rgba(107, 92, 231, 0.12) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 30%, rgba(208, 101, 32, 0.1) 0%, transparent 50%),
+                        radial-gradient(ellipse at 50% 90%, rgba(11, 61, 107, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .home-hero-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .home-hero .hero-badge {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: var(--ll-text);
+        }
+
+        .home-hero h1 {
+            font-size: clamp(2.6rem, 7vw, 4rem);
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            line-height: 1.06;
+            margin-bottom: var(--sp-3);
+            max-width: 580px;
+        }
+
+        .home-hero .subtitle {
+            font-size: clamp(0.95rem, 2.2vw, 1.08rem);
+            color: #3a3a4e;
+            max-width: 440px;
+            line-height: 1.65;
+            margin-bottom: var(--sp-5);
+        }
+
+        .hero-app-icons {
+            display: flex;
+            justify-content: center;
+            gap: var(--sp-3);
+        }
+
+        .hero-app-icon {
+            transition: transform 0.3s ease;
+            text-decoration: none;
+        }
+
+        .hero-app-icon:hover {
+            transform: translateY(-4px) scale(1.05);
+        }
+
+        .hero-app-icon img {
+            width: 64px;
+            height: 64px;
+            border-radius: 22.37%;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: var(--sp-4);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            opacity: 0.4;
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.4; }
+            50% { transform: translateX(-50%) translateY(6px); opacity: 0.7; }
+        }
+
+        /* App panels */
+        .app-panel {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 400px;
+            overflow: hidden;
+        }
+
+        .app-panel-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: var(--sp-8) var(--sp-6);
+        }
+
+        .app-panel-content h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: var(--sp-1);
+        }
+
+        .app-panel-content p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--ll-text-secondary);
+            margin-bottom: var(--sp-3);
+            max-width: 380px;
+        }
+
+        .app-panel-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: gap 0.2s ease;
+        }
+
+        .app-panel-link:hover {
+            gap: 10px;
+        }
+
+        .app-panel-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--sp-2);
+            padding: var(--sp-5) var(--sp-3);
+            overflow: hidden;
+        }
+
+        .app-panel-visual .screenshot-item {
+            width: 160px;
+        }
+
+        /* Reverse panel: screenshots left, text right */
+        .app-panel-reverse {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .app-panel-reverse .app-panel-visual {
+            order: -1;
+        }
+
+        /* Values */
+        .values-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+        }
+
+        .value-item {
+            padding: var(--sp-6) var(--sp-3);
+            text-align: center;
+        }
+
+        .value-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin: 0 auto var(--sp-2);
+        }
+
+        .value-item h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            letter-spacing: -0.01em;
+        }
+
+        .value-item p {
+            font-size: 0.85rem;
+            color: var(--ll-text-secondary);
+            line-height: 1.55;
+            max-width: 240px;
+            margin: 0 auto;
+        }
+
+        /* About */
+        .about-section {
+            text-align: center;
+            padding: var(--sp-10) var(--sp-3);
+            background: linear-gradient(180deg, var(--ll-bg) 0%, #F0EDE8 100%);
+        }
+
+        .about-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: var(--sp-2);
+        }
+
+        .about-section p {
+            color: var(--ll-text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            max-width: 480px;
+            margin: 0 auto var(--sp-1);
+        }
+
+        .about-location {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.82rem;
+            color: var(--ll-text-secondary);
+            margin-top: var(--sp-2);
+        }
+
+        @media (max-width: 768px) {
+            .app-panel,
+            .app-panel-reverse {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .app-panel-reverse .app-panel-visual {
+                order: 0;
+            }
+
+            .app-panel-content {
+                padding: var(--sp-6) var(--sp-3) var(--sp-3);
+            }
+
+            .app-panel-visual {
+                padding: var(--sp-3) var(--sp-3) var(--sp-6);
+            }
+
+            .app-panel-visual .screenshot-item {
+                width: 130px;
+            }
+
+            .values-strip {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-app-icon img {
+                width: 56px;
+                height: 56px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">
+                <svg class="nav-logo" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 16c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6" stroke="#1a1a2e" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+                    <path d="M22 16c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6" stroke="#1a1a2e" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+                    <circle cx="10" cy="16" r="1.4" fill="#1a1a2e"/>
+                    <circle cx="22" cy="16" r="1.4" fill="#1a1a2e"/>
+                </svg>
+                <span class="nav-wordmark">Little Loop</span>
+            </a>
+            <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="frame.html">Frame</a></li>
+                <li><a href="skyready.html">SkyReady</a></li>
+                <li><a href="tideready.html">TideReady</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="home-hero">
+        <div class="home-hero-content">
+            <div class="hero-badge">Indie App Studio</div>
+            <h1>Small apps, made with care.</h1>
+            <p class="subtitle">iOS apps that do one thing well. No bloat, no accounts, no data harvesting. Just useful tools that respect your time and privacy.</p>
+            <div class="hero-app-icons">
+                <a href="frame.html" class="hero-app-icon"><img src="images/icon-frame.png" alt="Frame app icon"></a>
+                <a href="skyready.html" class="hero-app-icon"><img src="images/icon-skyready.png" alt="SkyReady app icon"></a>
+                <a href="tideready.html" class="hero-app-icon" style="width:64px;height:64px;border-radius:22.37%;background:linear-gradient(135deg,#A8D8EA,#0B3D6B);display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 8px 24px rgba(0,0,0,0.14);">🌊</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a1a2e" stroke-width="2" stroke-linecap="round"><path d="M7 10l5 5 5-5"/></svg>
+        </div>
+    </section>
+
+    <!-- Frame -->
+    <div class="app-panel fade-in" style="background: linear-gradient(160deg, #e8e0ff 0%, #d8d0f0 100%);">
+        <div class="app-panel-content">
+            <img src="images/icon-frame.png" alt="Frame" class="app-icon-img app-icon-img-md" style="margin-bottom: var(--sp-2);">
+            <h3>Frame</h3>
+            <p>Beautiful photo frames, film-inspired filters, and on-device AI edits. Turn your photos into something worth keeping.</p>
+            <a href="frame.html" class="app-panel-link" style="color: #6b5ce7;">Learn more <span>&rarr;</span></a>
+        </div>
+        <div class="app-panel-visual" style="background: rgba(107, 92, 231, 0.06);">
+            <div class="screenshot-item"><img src="images/frame-editor.jpg" alt="Frame editor" loading="lazy" width="400" height="865"></div>
+            <div class="screenshot-item"><img src="images/frame-frames.jpg" alt="Frame layouts" loading="lazy" width="400" height="865"></div>
+        </div>
+    </div>
+
+    <!-- SkyReady -->
+    <div class="app-panel app-panel-reverse fade-in" style="background: linear-gradient(160deg, #FFF0DC 0%, #FFE0C0 100%);">
+        <div class="app-panel-content">
+            <img src="images/icon-skyready.png" alt="SkyReady" class="app-icon-img app-icon-img-md" style="margin-bottom: var(--sp-2);">
+            <h3>SkyReady</h3>
+            <p>Instant weather decisions. Open the app, get an actionable recommendation in under two seconds. No data overload.</p>
+            <a href="skyready.html" class="app-panel-link" style="color: #d06520;">Learn more <span>&rarr;</span></a>
+        </div>
+        <div class="app-panel-visual" style="background: rgba(208, 101, 32, 0.05);">
+            <div class="screenshot-item"><img src="images/skyready-weather.png" alt="SkyReady weather" loading="lazy" width="1320" height="2868"></div>
+            <div class="screenshot-item"><img src="images/skyready-notification.png" alt="SkyReady notification" loading="lazy" width="1320" height="2868"></div>
+        </div>
+    </div>
+
+    <!-- TideReady -->
+    <div class="app-panel fade-in" style="background: linear-gradient(160deg, #d4e8f4 0%, #b8d4e8 100%);">
+        <div class="app-panel-content">
+            <div style="width:64px;height:64px;border-radius:22.37%;background:linear-gradient(135deg,#A8D8EA,#0B3D6B);display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 8px 24px rgba(0,0,0,0.12);margin-bottom:var(--sp-2);">🌊</div>
+            <h3>TideReady</h3>
+            <p>Should you go to the coast? Instant tide and coastal decisions for beach, surf, kite, fishing, and walks. UK and US coasts.</p>
+            <a href="tideready.html" class="app-panel-link" style="color: #0B3D6B;">Coming soon <span>&rarr;</span></a>
+        </div>
+        <div class="app-panel-visual" style="background: rgba(11, 61, 107, 0.05);">
+            <div style="text-align: center; padding: var(--sp-5);">
+                <p style="font-size: 1rem; font-weight: 600; color: #0B3D6B; margin-bottom: 4px;">Coming Soon</p>
+                <p style="font-size: 0.85rem; color: var(--ll-text-secondary);">Five activity modes. One question each.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Values -->
+    <div class="values-strip fade-in">
+        <div class="value-item" style="background: #f0ecf8;">
+            <div class="value-icon" style="background: rgba(107,92,231,0.1);">🔒</div>
+            <h3>Privacy first</h3>
+            <p>No accounts, no tracking, no data harvesting. Your data stays on your device.</p>
+        </div>
+        <div class="value-item" style="background: #FFF5EC;">
+            <div class="value-icon" style="background: rgba(208,101,32,0.08);">⚡</div>
+            <h3>One thing, done well</h3>
+            <p>Each app answers a single question brilliantly. No feature bloat.</p>
+        </div>
+        <div class="value-item" style="background: #E8F4F8;">
+            <div class="value-icon" style="background: rgba(11,61,107,0.08);">🇬🇧</div>
+            <h3>Made in the UK</h3>
+            <p>An independent studio building apps we'd want to use ourselves.</p>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div class="about-section">
+        <h2>About Little Loop</h2>
+        <p>An independent studio based in the UK. We believe apps should be simple, private, and well-crafted. Every app starts with a single question a person needs answered, and stays focused on answering it brilliantly.</p>
+        <div class="about-location">📍 United Kingdom</div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 16c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6" stroke="#1a1a2e" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+                    <path d="M22 16c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6" stroke="#1a1a2e" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+                    <circle cx="10" cy="16" r="1.4" fill="#1a1a2e"/>
+                    <circle cx="22" cy="16" r="1.4" fill="#1a1a2e"/>
+                </svg>
+                <span class="footer-copy">&copy; 2026 Little Loop</span>
+            </div>
+            <div class="footer-links">
+                <a href="frame.html">Frame</a>
+                <a href="skyready.html">SkyReady</a>
+                <a href="tideready.html">TideReady</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="support.html">Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
