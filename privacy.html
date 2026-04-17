@@ -44,7 +44,7 @@
     <!-- Content -->
     <div class="legal">
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: 11 April 2026</p>
+        <p class="last-updated">Last updated: 17 April 2026</p>
 
         <p>Little Loop ("we", "us", "our") operates the Frame, SkyReady, and TideReady iOS applications. This policy explains what data each app accesses, how it is used, and your rights.</p>
 
@@ -63,6 +63,10 @@
         <p>Frame requests access to your photo library so you can select photos to edit. Photos are processed entirely on your device. We never upload, store, or transmit your photos to any server.</p>
         <h3>AI Processing</h3>
         <p>All AI features (background swap, cartoon effects, etc.) run on-device using Core ML and ONNX models. No images are sent to cloud services.</p>
+        <h3>Face Data</h3>
+        <p>Some editing features (face enhancement, portrait effects) use Apple's Core Image face detection to locate faces within a photo. Frame detects <strong>face bounding box coordinates only</strong> — the rectangular region where a face appears. No facial features, geometry, templates, embeddings, or biometric identifiers are collected.</p>
+        <p>Face coordinates are used solely to apply visual effects (skin smoothing, brightness adjustments, artistic distortions) to the face region during the current editing session. Face data is <strong>never shared with any third party</strong>. All detection runs on-device via Apple's Core Image framework.</p>
+        <p>Face data is <strong>not stored</strong>. Coordinates exist only in temporary memory during the editing session and are discarded when you close the editor, switch photos, or exit the app. No face data is written to disk or retained in any persistent form.</p>
         <h3>Analytics</h3>
         <p>Frame uses Mixpanel for anonymous usage analytics (e.g., which features are used most). No personally identifiable information is collected. You can opt out in the app's settings.</p>
         <h3>Purchases</h3>
