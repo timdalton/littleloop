@@ -46,7 +46,7 @@
     <!-- Content -->
     <div class="legal">
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: 29 April 2026</p>
+        <p class="last-updated">Last updated: 30 April 2026</p>
 
         <p>Little Loop ("we", "us", "our") operates the Frame, SkyReady, and TideReady iOS applications. This policy explains what data each app accesses, how it is used, and your rights.</p>
 
@@ -88,11 +88,17 @@
 
         <h2>TideReady</h2>
         <h3>Location Data</h3>
-        <p>TideReady will request your location to find nearby tide stations and provide coastal conditions. Location data is sent to tide data providers (UKHO for UK waters, NOAA for US waters) and Apple's WeatherKit for wind data. We do not store or log your location.</p>
+        <p>TideReady requests your location to find the nearest tidal station and provide coastal conditions for your area. Your coordinates are sent to Apple's WeatherKit for wind and weather data, and to Open-Meteo for marine swell forecasts. Tide data providers (UKHO, NOAA, NIWA, and DFO) receive only the station identifier — not your raw location. We do not store or log your location on any server.</p>
+        <h3>Session Photos</h3>
+        <p>If you log a coastal session and attach photos, those photos are stored locally in the app's private storage on your device. Photos are never uploaded to any server or shared with any third party.</p>
+        <h3>Calendar Access</h3>
+        <p>If you use the activity planner feature, TideReady can add optimal tide windows to your calendar. The app uses write-only calendar access and does not read your existing calendar events. Calendar entries are created on your device only and are not transmitted to our servers.</p>
         <h3>Offline Data</h3>
         <p>TideReady caches tide predictions locally on your device for offline use in areas with poor connectivity. This data is not shared.</p>
         <h3>Analytics</h3>
-        <p>TideReady uses Mixpanel for anonymous usage analytics (e.g., which activity modes and locations are most popular). No personally identifiable information is collected. This data helps us decide which new countries to add.</p>
+        <p>TideReady uses Mixpanel for anonymous usage analytics (e.g., which activity modes and locations are most popular). Analytics data is sent to Mixpanel's EU servers. No personally identifiable information is collected. This data helps us decide which new countries to add.</p>
+        <h3>Purchases</h3>
+        <p>TideReady Pro subscriptions are managed through Apple's App Store. Payment information is handled entirely by Apple. We do not see or store your payment details.</p>
 
         <h2>Third-Party Services</h2>
         <p>Our apps may interact with the following third-party services, each governed by their own privacy policies:</p>
@@ -100,8 +106,10 @@
             <li>Apple WeatherKit (weather data)</li>
             <li>UKHO Admiralty API (UK tide data)</li>
             <li>NOAA (US tide data)</li>
+            <li>NIWA (New Zealand tide data)</li>
+            <li>Fisheries and Oceans Canada / DFO (Canadian tide data)</li>
+            <li>Open-Meteo (marine swell and weather forecasts)</li>
             <li>Mixpanel (anonymous analytics)</li>
-            <li>RevenueCat (subscription management)</li>
             <li>Apple App Store (purchases)</li>
         </ul>
 
