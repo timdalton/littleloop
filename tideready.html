@@ -16,213 +16,52 @@
     <meta name="twitter:image" content="https://littleloop.co.uk/images/icon-tideready.png">
     <!-- Smart App Banner: shows a native "OPEN/VIEW in App Store" banner to iOS Safari visitors -->
     <meta name="apple-itunes-app" content="app-id=6762483118">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
     <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#0b1622">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="canonical" href="https://littleloop.co.uk/tideready.html">
 </head>
-<body class="app-tideready">
-
-    <nav class="nav">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-brand">
-                <svg class="nav-logo" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 16c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M22 16c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/><circle cx="10" cy="16" r="1.4" fill="currentColor"/><circle cx="22" cy="16" r="1.4" fill="currentColor"/></svg>
-                <span class="nav-wordmark">Little Loop</span>
-            </a>
-            <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
-            <ul class="nav-links">
-                <li><a href="frame.html">Frame</a></li>
-                <li><a href="skyready.html">SkyReady</a></li>
-                <li><a href="tideready.html" class="active">TideReady</a></li>
-                <li><a href="support.html">Support</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <section class="hero">
-        <div class="app-hero">
-            <img src="images/icon-tideready.png" alt="TideReady app icon" class="app-icon-img app-icon-img-lg">
-            <div class="hero-badge">Coastal &amp; Tide</div>
-            <h1>Decisions, not tide charts.</h1>
-            <p class="subtitle">Should you go to the coast? TideReady gives instant, actionable answers for beach, surf, kite, fishing, and coastal walks. Covering the UK, Ireland, US, Canada, New Zealand, and more.</p>
-            <a href="https://apps.apple.com/gb/app/tideready/id6762483118" class="app-store-badge">
-                <svg viewBox="0 0 20 20" fill="white"><path d="M15.5 10.6c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.1.8-.7 0-1.7-.7-2.8-.7-1.4 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7 1.3 0 1.6.7 2.8.7 1.2 0 2-1 2.7-2.1.9-1.2 1.2-2.4 1.2-2.5-.1 0-2.7-1.3-2.7-3.4zM13 4.5c.6-.7 1-1.7.9-2.7-0.9 0-1.9.6-2.5 1.3-.6.6-.9 1.6-.8 2.6 1 .1 1.8-.5 2.4-1.2z"/></svg>
-                Download on the App Store
-            </a>
-        </div>
-    </section>
-
-    <div class="section-coloured">
-        <div class="screenshot-showcase fade-in">
-            <div class="screenshot-row">
-                <div class="screenshot-item"><img src="images/tideready-beach.png" alt="TideReady beach mode showing tide state, wind, swell, and water quality cards" loading="lazy" width="1290" height="2796"></div>
-                <div class="screenshot-item"><img src="images/tideready-surf.png" alt="TideReady surf mode with go/no-go verdict, swell height, and wind conditions" loading="lazy" width="1290" height="2796"></div>
-                <div class="screenshot-item"><img src="images/tideready-kite.png" alt="TideReady kite mode showing launchability, wind speed, and tide direction" loading="lazy" width="1290" height="2796"></div>
-            </div>
-        </div>
-    </div>
-
-    <section class="section">
-        <div class="section-header fade-in">
-            <h2>Is TideReady for me?</h2>
-            <p>If your day depends on the tide, yes.</p>
-        </div>
-        <div class="prose-block fade-in" style="max-width: 720px; margin: 0 auto; text-align: center; line-height: 1.7;">
-            <p>TideReady is a tide app for the UK and beyond that answers one question — <strong>should I go to the coast right now?</strong> — instead of handing you a chart to interpret.</p>
-            <p>It's built for <strong>sea anglers</strong> deciding when to fish the tide, <strong>surfers</strong> checking if it's worth the drive, <strong>paddleboarders and open-water swimmers</strong> picking a safe window, <strong>kitesurfers</strong> reading wind against tide, and <strong>families and dog walkers</strong> who don't want to get caught out by an incoming tide. It works from official tide data (UKHO, NOAA, CHS, NIWA) across the UK, Ireland, US, Canada and New Zealand, and the safety warnings are free for everyone.</p>
-        </div>
-    </section>
-
-    <div class="section-coloured">
-        <section class="section">
-            <div class="section-header fade-in">
-                <h2>Five activity modes, one question each</h2>
-                <p>Pick your activity. Get your answer. Go.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature feature-coloured fade-in">
-                    <div class="feature-icon">🏖️</div>
-                    <h3>Beach</h3>
-                    <p>Is the beach growing or shrinking? How long before the tide turns? Water quality and rip current safety included.</p>
-                </div>
-                <div class="feature feature-coloured fade-in">
-                    <div class="feature-icon">🏄</div>
-                    <h3>Surf</h3>
-                    <p>Go or no-go, based on tide, wind, and swell combined. Swell height, period, and direction in one verdict.</p>
-                </div>
-                <div class="feature feature-coloured fade-in">
-                    <div class="feature-icon">🪁</div>
-                    <h3>Kite &amp; Windsurf</h3>
-                    <p>Can you launch? Wind speed, direction, and tide state in a single launchability answer.</p>
-                </div>
-                <div class="feature feature-coloured fade-in">
-                    <div class="feature-icon">🎣</div>
-                    <h3>Fish</h3>
-                    <p>Find the prime tide run windows. Solunar times and conditions to know when the fish are moving.</p>
-                </div>
-                <div class="feature feature-coloured fade-in">
-                    <div class="feature-icon">🚶</div>
-                    <h3>Coastal Walk</h3>
-                    <p>Is the path passable? Safety countdowns and tidal cut-off alerts tell you when to be off the beach.</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div class="section-coloured">
-        <section class="section">
-            <div class="section-header fade-in">
-                <h2>Safety built in, not bolted on</h2>
-                <p>Real-time coastal safety data that could change your plans for the better.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature feature-coloured fade-in">
-                    <div class="feature-icon">🌊</div>
-                    <h3>Rip Current Assessment</h3>
-                    <p>Risk level based on swell, wind, and tide conditions. Factors that increase risk are listed clearly.</p>
-                </div>
-                <div class="feature feature-coloured fade-in">
-                    <div class="feature-icon">💧</div>
-                    <h3>Water Quality</h3>
-                    <p>UK bathing water classifications from the Environment Agency and sewage discharge alerts from Surfers Against Sewage.</p>
-                </div>
-                <div class="feature feature-coloured fade-in">
-                    <div class="feature-icon">⌚</div>
-                    <h3>Apple Watch</h3>
-                    <p>Glanceable tide state, conditions, and ratings on your wrist. Full conditions for Pro, basic tide for everyone.</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div class="pullquote-section fade-in">
-        <blockquote>"Safety is never behind a paywall."</blockquote>
-        <cite>Tide warnings, rip current alerts, water quality, and safety countdowns are always free. No account needed, no ads.</cite>
-    </div>
-
-    <div class="section-coloured">
-        <section class="section">
-            <div class="section-header fade-in">
-                <h2>Free forever. Pro when you want more.</h2>
-                <p>Everything you need to stay safe is free. Pro unlocks the features that make every session better.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature feature-coloured fade-in">
-                    <div class="feature-icon">🆓</div>
-                    <h3>Always Free</h3>
-                    <p>Tide data, conditions, all 5 activity modes, water quality, rip current safety, lifeguard info, and offline caching.</p>
-                </div>
-                <div class="feature feature-coloured fade-in">
-                    <div class="feature-icon">⭐</div>
-                    <h3>TideReady Pro</h3>
-                    <p>Condition alerts, daily briefing, 7-day activity planner, multiple favourites, widgets, session history, and Apple Watch complications.</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <section class="section">
-        <div class="section-header fade-in">
-            <h2>7 countries and growing</h2>
-            <p>Real tide data from official hydrographic sources, combined with live wind and swell conditions.</p>
-        </div>
-        <div class="features-grid">
-            <div class="feature fade-in" style="background: var(--app-feature-bg); border-color: var(--app-accent-medium);">
-                <div class="feature-icon">🌍</div>
-                <h3>Official Tide Data</h3>
-                <p>UKHO for UK &amp; Ireland, NOAA for the US, CHS for Canada, NIWA for New Zealand. Australia &amp; Portugal coming soon.</p>
-            </div>
-            <div class="feature fade-in" style="background: var(--app-feature-bg); border-color: var(--app-accent-medium);">
-                <div class="feature-icon">📡</div>
-                <h3>Live Conditions</h3>
-                <p>Wind from Apple WeatherKit, swell and sea temperature from Open-Meteo Marine. Combined into one clear answer.</p>
-            </div>
-            <div class="feature fade-in" style="background: var(--app-feature-bg); border-color: var(--app-accent-medium);">
-                <div class="feature-icon">📶</div>
-                <h3>Works Offline</h3>
-                <p>Tide predictions cached locally. Works at the beach even when your signal doesn't.</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="closing-cta">
-        <h2>Download TideReady</h2>
-        <p>Five activity modes. Official tide data. Water quality and rip current safety. Apple Watch. Privacy-first. No ads.</p>
-        <a href="https://apps.apple.com/gb/app/tideready/id6762483118" class="app-store-badge" style="margin-top: var(--sp-3); display: inline-flex;">
-            <svg viewBox="0 0 20 20" fill="white"><path d="M15.5 10.6c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.1.8-.7 0-1.7-.7-2.8-.7-1.4 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7 1.3 0 1.6.7 2.8.7 1.2 0 2-1 2.7-2.1.9-1.2 1.2-2.4 1.2-2.5-.1 0-2.7-1.3-2.7-3.4zM13 4.5c.6-.7 1-1.7.9-2.7-0.9 0-1.9.6-2.5 1.3-.6.6-.9 1.6-.8 2.6 1 .1 1.8-.5 2.4-1.2z"/></svg>
-            Download on the App Store
-        </a>
-    </div>
-
-    <footer class="footer">
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M10 16c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M22 16c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/><circle cx="10" cy="16" r="1.4" fill="currentColor"/><circle cx="22" cy="16" r="1.4" fill="currentColor"/></svg>
-                <span class="footer-copy">&copy; 2026 Little Loop</span>
-            </div>
-            <div class="footer-links">
-                <a href="frame.html">Frame</a>
-                <a href="skyready.html">SkyReady</a>
-                <a href="tideready.html">TideReady</a>
-                <a href="privacy.html">Privacy</a>
-                <a href="terms.html">Terms</a>
-                <a href="support.html">Support</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, i) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => entry.target.classList.add('visible'), i * 80);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
-
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="nav-in">
+    <a class="brand" href="index.html">littleloop</a>
+    <nav aria-label="Main"><a href="skyready.html">SkyReady</a><a href="tideready.html" aria-current="page">TideReady</a><a href="frame.html">Frame</a><a href="support.html">Support</a></nav>
+</div></header>
+<main id="main">
+<section class="wrap hero app">
+  <div class="copy">
+    <img class="appicon" src="images/icon-tideready.png" alt="TideReady app icon" width="72" height="72">
+    <div class="kicker">Coastal &amp; tide</div>
+    <h1>Decisions, not tide charts.</h1>
+    <p class="lede">Should you go to the coast? TideReady gives an answer for beach, surf, kite, fishing and coastal walks, in the UK, Ireland, US, Canada, New Zealand and more.</p>
+    <a href="https://apps.apple.com/gb/app/tideready/id6762483118" class="badge"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15.5 10.6c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.1.8-.7 0-1.7-.7-2.8-.7-1.4 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7 1.3 0 1.6.7 2.8.7 1.2 0 2-1 2.7-2.1.9-1.2 1.2-2.4 1.2-2.5-.1 0-2.7-1.3-2.7-3.4zM13 4.5c.6-.7 1-1.7.9-2.7-0.9 0-1.9.6-2.5 1.3-.6.6-.9 1.6-.8 2.6 1 .1 1.8-.5 2.4-1.2z"/></svg>Download on the App Store</a>
+  </div>
+  <div class="phone-col">
+    <div class="phone"><video data-loop autoplay muted loop playsinline preload="metadata" poster="images/tideready-poster.jpg" aria-label="Recording of TideReady: the needle glides through the day and the waterline moves with the tide"><source src="images/tideready.mp4" type="video/mp4"></video></div>
+    <p class="vcap">Drag the needle and the waterline moves with the tide.</p>
+  </div>
+</section>
+<section class="wrap block"><div class="head"><h2>Is TideReady for me?</h2><p>If your day depends on the tide, yes.</p></div><div class="glass panel prose">
+  <p>TideReady is a tide app for the UK and beyond that answers one question: <strong>should I go to the coast right now?</strong> It gives you the answer instead of a chart to interpret.</p>
+  <p>It's built for <strong>sea anglers</strong> deciding when to fish the tide, <strong>surfers</strong> checking if it's worth the drive, <strong>paddleboarders and open-water swimmers</strong> picking a safe window, <strong>kitesurfers</strong> reading wind against tide, and <strong>families and dog walkers</strong> who don't want to get caught out by an incoming tide. It works from official tide data (UKHO, NOAA, CHS, NIWA) across the UK, Ireland, US, Canada and New Zealand, and the safety warnings are free for everyone.</p>
+</div></section>
+<section class="wrap block"><div class="head"><h2>Five activity modes, one question each</h2><p>Pick your activity. Get your answer. Go.</p></div><div class="grid"><div class="glass card"><h3>Beach</h3><p>Is the beach growing or shrinking? How long before the tide turns? Water quality and rip current safety included.</p></div><div class="glass card"><h3>Surf</h3><p>Go or no-go, based on tide, wind and swell together. Height, period and direction in one verdict.</p></div><div class="glass card"><h3>Kite &amp; windsurf</h3><p>Can you launch? Wind speed, direction and tide state in a single answer.</p></div><div class="glass card"><h3>Fish</h3><p>Find the prime tide run windows, with solunar times and conditions.</p></div><div class="glass card"><h3>Coastal walk</h3><p>Is the path passable? Safety countdowns and tidal cut-off alerts tell you when to be off the beach.</p></div></div></section>
+<section class="wrap block"><div class="head"><h2>Safety built in, not bolted on</h2><p>Coastal safety data that could change your plans for the better.</p></div><div class="grid"><div class="glass card"><h3>Rip current assessment</h3><p>Risk level based on swell, wind and tide. The factors that raise the risk are listed.</p></div><div class="glass card"><h3>Water quality</h3><p>UK bathing water classifications from the Environment Agency and sewage discharge alerts from Surfers Against Sewage.</p></div><div class="glass card"><h3>Apple Watch</h3><p>Tide state, conditions and ratings on your wrist. Full conditions for Pro, basic tide for everyone.</p></div></div></section>
+<section class="wrap block"><div class="glass quote"><blockquote>&ldquo;Safety is never behind a paywall.&rdquo;</blockquote><cite>Tide warnings, rip current alerts, water quality and safety countdowns are always free. No account, no ads.</cite></div></section>
+<section class="wrap block"><div class="head"><h2>Free forever. Pro when you want more.</h2><p>Everything you need to stay safe is free. Pro unlocks the features that make every session better.</p></div><div class="grid"><div class="glass card"><h3>Always free</h3><p>Tide data, conditions, all five activity modes, water quality, rip current safety, lifeguard info and offline caching.</p></div><div class="glass card"><h3>TideReady Pro</h3><p>Condition alerts, daily briefing, 7-day activity planner, multiple favourites, widgets, session history and Apple Watch complications.</p></div></div></section>
+<section class="wrap block"><div class="head"><h2>7 countries and growing</h2><p>Official tide data, combined with live wind and swell.</p></div><div class="grid"><div class="glass card"><h3>Official tide data</h3><p>UKHO for the UK and Ireland, NOAA for the US, CHS for Canada, NIWA for New Zealand. Australia and Portugal coming soon.</p></div><div class="glass card"><h3>Live conditions</h3><p>Wind from Apple WeatherKit, swell and sea temperature from Open-Meteo Marine. Combined into one clear answer.</p></div><div class="glass card"><h3>Works offline</h3><p>Tide predictions are cached on your phone, so it works at the beach even when your signal doesn't.</p></div></div></section>
+<section class="wrap block"><div class="glass closing"><img src="images/icon-tideready.png" alt="TideReady app icon" width="64" height="64"><h2>Download TideReady</h2><p>Five activity modes. Official tide data. Water quality and rip current safety. Apple Watch. Private, with no ads.</p><a href="https://apps.apple.com/gb/app/tideready/id6762483118" class="badge"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15.5 10.6c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.1.8-.7 0-1.7-.7-2.8-.7-1.4 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7 1.3 0 1.6.7 2.8.7 1.2 0 2-1 2.7-2.1.9-1.2 1.2-2.4 1.2-2.5-.1 0-2.7-1.3-2.7-3.4zM13 4.5c.6-.7 1-1.7.9-2.7-0.9 0-1.9.6-2.5 1.3-.6.6-.9 1.6-.8 2.6 1 .1 1.8-.5 2.4-1.2z"/></svg>Download on the App Store</a></div></section>
+</main>
+<footer><div class="wrap">
+    <span class="copy">&copy; 2026 Little Loop. Made in Cambridgeshire.</span>
+    <nav aria-label="Footer"><a href="skyready.html">SkyReady</a><a href="tideready.html">TideReady</a><a href="frame.html">Frame</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav>
+</div></footer>
+<script src="sky.js"></script>
 </body>
 </html>
