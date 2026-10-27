@@ -119,10 +119,12 @@
         }
 
         // Veil: keeps white text above 4.5:1 at every hour
+        // (darker while the sun is up, since the day sky is the bright one)
+        var day = s.up ? Math.min(1, s.elev * 3) : 0;
         g = cx.createLinearGradient(0, 0, 0, H);
-        g.addColorStop(0, 'rgba(3,12,24,.58)');
-        g.addColorStop(0.72, 'rgba(3,12,24,.5)');
-        g.addColorStop(1, 'rgba(3,12,24,.42)');
+        g.addColorStop(0, 'rgba(3,12,24,' + (0.4 + 0.2 * day).toFixed(3) + ')');
+        g.addColorStop(0.72, 'rgba(3,12,24,' + (0.36 + 0.2 * day).toFixed(3) + ')');
+        g.addColorStop(1, 'rgba(3,12,24,' + (0.3 + 0.16 * day).toFixed(3) + ')');
         cx.fillStyle = g;
         cx.fillRect(0, 0, W, H);
 

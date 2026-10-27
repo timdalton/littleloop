@@ -1,0 +1,1 @@
+(() => JSON.stringify({ stime: document.getElementById('stime').textContent, sk: document.getElementById('sk').textContent, font: getComputedStyle(document.querySelector('h1')).fontFamily, bodyFont: getComputedStyle(document.body).fontFamily, inter: document.documentElement.outerHTML.includes('Inter') }))()

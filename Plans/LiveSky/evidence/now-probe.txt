@@ -1,0 +1,1 @@
+      "value": "{"stime":"now","sk":"Your sky, right now","font":"ui-serif, "New York", Newsreader, Georgia, serif","bodyFont":"-apple-system, "system-ui", "SF Pro Text", "Segoe UI", system-ui, Roboto, sans-serif","inter":false}"
