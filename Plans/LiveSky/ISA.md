@@ -52,7 +52,7 @@ A visitor lands and the page is painted for their own hour: sky and sea, a serif
 - 2026-10-27: No first-run glide on the site; the page shows a "Drag to see the sky at another hour" hint instead, so nothing animates unless dragged (S8).
 - 2026-10-27: Band is a native range input (keyboard and labelled by default) with a daylight bar from computed sunrise/sunset for lat 52.2.
 - 2026-10-27: SkyReady loop is forward then reversed (the app's glide ends at 3pm, not at now); SkyReady needed a signed Debug build for WeatherKit. Recordings come from `main` builds, which may be ahead of the App Store versions.
-- 2026-10-27: Old SkyReady/TideReady screenshots are no longer used by any page but remain in `images/`. Frame's App Store link is the existing placeholder id0000000000 (404), untouched.
+- 2026-10-27: Old SkyReady/TideReady screenshots are no longer used by any page but remain in `images/`. Frame's placeholder App Store link (id0000000000, 404) replaced with the live FrameLab listing id6755479585 (ASC /v1/apps; returns 200).
 - 2026-10-27: Wordmark is "littleloop" (as in the mock); meta titles still say "Little Loop".
 
 ## Verification
@@ -67,6 +67,7 @@ A visitor lands and the page is painted for their own hour: sky and sea, a serif
 - S8: probe-motion.js: 0 rAF calls over 1.5 s at rest, canvas unchanged; 0 after a drag settles. Code read: reduce-motion paints directly, Save-Data repaints on release only and stops video autoplay.
 - S9: evidence/contrast-sweep.txt (probe-contrast.js): worst white-text contrast over the canvas, 17 hours x 1440/390, min 5.12.
 - S10: grep `apple-itunes-app`, `og:url`, "Is TideReady for me" present; `git diff ef7dd72 HEAD -- tideready.html` removes no meta lines.
-- S11 (open): resource-probe.txt shows no failed requests or broken images on all 7 pages and links.txt shows 200 for every internal and App Store link except Frame's placeholder (404, pre-existing). Console errors not captured.
+- S11 (open, console only): FrameLab link now 200 (curl -L). Re-probed /, /tideready, /frame via VerifyViewport: readyState complete, canvas present, 0 broken images; sky.js passes node --check; no inline scripts. A console-error listener was never attached, so "no console errors" is not directly proven.
+- S11 earlier: resource-probe.txt shows no failed requests or broken images on all 7 pages and links.txt shows 200 for every internal and App Store link except Frame's placeholder (404, pre-existing). Console errors not captured.
 - A1: branch is design/live-sky, nothing pushed.
 - A2: grep for key-like strings in html/js/css finds none.
