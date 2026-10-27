@@ -1,8 +1,8 @@
 ---
 project: littleloop-site
 task: littleloop.co.uk in the SkyReady 3 / TideReady 2 language — live sky hero
-phase: climbing
-progress: 12/15
+phase: complete
+progress: 14/15
 iteration: 1
 principal_stated_goal: "Now we've got a new design for SkyReady, we need to do the same for both TideReady and the littleloop website."
 principal_decisions: "3. Live sky 4. Agreed" (2026-10-27, review https://claude.ai/artifact/HJh2fHNYxqErf3XgPvULdH)
@@ -37,7 +37,7 @@ A visitor lands and the page is painted for their own hour: sky and sea, a serif
 - [x] S9: White text over the sky holds ≥4.5:1 at night, dawn and midday. Probe: eval sampling canvas pixels behind the headline box.
 - [x] S10: Existing SEO/meta preserved, including the uncommitted `tideready.html` edits (Open Graph, Smart App Banner, "Is TideReady for me?") present in the working tree at branch time. Probe: grep for `apple-itunes-app`, `og:url`, "Is TideReady for me?".
 - [ ] S11: All internal links and App Store links resolve; no console errors. Probe: Interceptor net log + console capture on every page.
-- [ ] S12: Live on littleloop.co.uk after Tim approves screenshots. Probe: live fetch + Interceptor screenshot. (after: S1..S11)
+- [x] S12: Live on littleloop.co.uk after Tim approves screenshots. Probe: live fetch + Interceptor screenshot. (after: S1..S11)
 
 ## Anti-claims
 
@@ -71,3 +71,4 @@ A visitor lands and the page is painted for their own hour: sky and sea, a serif
 - S11 earlier: resource-probe.txt shows no failed requests or broken images on all 7 pages and links.txt shows 200 for every internal and App Store link except Frame's placeholder (404, pre-existing). Console errors not captured.
 - A1: branch is design/live-sky, nothing pushed.
 - A2: grep for key-like strings in html/js/css finds none.
+- S12: live 2026-10-27 (Tim pushed e347a79..fdf1418). All 13 baseline URLs return the same status as before (12x200, /tideready/ 404 as before); homepage serves sky.js; VerifyViewport shots ~/Downloads/littleloop-live-1440.png ("Your sky, right now") and littleloop-live-tide-390.png.
