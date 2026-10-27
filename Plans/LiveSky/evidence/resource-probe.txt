@@ -1,7 +1,0 @@
-      "value": "{"p":"/","n":6,"bad":[],"brokenImgs":[]}"
-      "value": "{"p":"/skyready","n":6,"bad":[],"brokenImgs":[]}"
-      "value": "{"p":"/tideready","n":6,"bad":[],"brokenImgs":[]}"
-      "value": "{"p":"/frame","n":7,"bad":[],"brokenImgs":[]}"
-      "value": "{"p":"/privacy","n":3,"bad":[],"brokenImgs":[]}"
-      "value": "{"p":"/terms","n":3,"bad":[],"brokenImgs":[]}"
-      "value": "{"p":"/support","n":3,"bad":[],"brokenImgs":[]}"

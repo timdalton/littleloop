@@ -1,4 +1,0 @@
-      "value": "{"src":"skyready.mp4","poster":"skyready-poster.jpg","readyState":4,"paused":false,"muted":true,"loop":true,"playsInline":true,"t0":1.2,"t1":2.4,"advancing":true,"vw":442,"vh":960,"dur":5.2}"
-      "value": "{"src":"skyready.mp4","poster":"skyready-poster.jpg","readyState":4,"paused":false,"muted":true,"loop":true,"playsInline":true,"t0":3.18,"t1":4.39,"advancing":true,"vw":442,"vh":960,"dur":5.2}"
-      "value": "{"src":"tideready.mp4","poster":"tideready-poster.jpg","readyState":4,"paused":false,"muted":true,"loop":true,"playsInline":true,"t0":1.16,"t1":2.37,"advancing":true,"vw":442,"vh":960,"dur":4.33}"
-      "value": "{"src":"tideready.mp4","poster":"tideready-poster.jpg","readyState":1,"paused":false,"muted":true,"loop":true,"playsInline":true,"t0":3.13,"t1":0,"advancing":true,"vw":442,"vh":960,"dur":4.33}"
