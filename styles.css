@@ -163,7 +163,9 @@ section.block > .head p { margin-top: 10px; color: var(--ink-soft); }
 .band .hint { font-size: 12px; color: var(--ink-faint); margin-top: 6px; }
 
 /* ── App cards ── */
-.apps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.apps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.also { margin: 14px 4px 0; font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); }
+.also a { color: #fff; }
 .app { display: block; padding: 18px; text-decoration: none; color: #fff; min-width: 0; transition: background 0.2s; }
 .app:hover { background: var(--glass-strong); color: #fff; }
 .app img { width: 56px; height: 56px; border-radius: 22%; display: block; }
