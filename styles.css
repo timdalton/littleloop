@@ -167,7 +167,7 @@ section.block > .head p { margin-top: 10px; color: var(--ink-soft); }
 .also { margin: 14px 4px 0; font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); }
 .also a { color: #fff; }
 .app { display: block; padding: 18px; text-decoration: none; color: #fff; min-width: 0; transition: background 0.2s; }
-.app:hover { background: var(--glass-strong); color: #fff; }
+a.app:hover { background: var(--glass-strong); color: #fff; }
 .app img { width: 56px; height: 56px; border-radius: 22%; display: block; }
 .app b { display: block; font-family: var(--serif); font-weight: 600; font-size: 1.45rem; margin-top: 12px; }
 .app span.d { display: block; font-size: 14px; color: var(--ink-soft); margin-top: 6px; line-height: 1.45; }
